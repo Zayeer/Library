@@ -23,6 +23,8 @@ h1 {
 	font-size: 5em;
 }
 
+/* books-container styling */
+
 .books-container {
 	font-size: 3em;
 	margin-top: 40px;
@@ -94,13 +96,15 @@ h1 {
 .addABook {	
 	font-size: 1.5em;
 	text-decoration: underline;
-	transform: rotate(350deg); */ 
+	transform: rotate(350deg); 
 }
 
 .addABook:hover {
 	transform: rotate(0deg);
 	cursor: pointer;
 }
+
+/*form styling*/
 
 .form-container {
 	display: none;
@@ -224,11 +228,15 @@ input:active {
 	font-size: 0.5em;
 	display: none;
 }
+
+
 @media only screen and (min-width: 600px) and (max-width: 880px) {
 	.books-container {
 		grid-template-columns: repeat(2, 1fr);
 	}
-} 
+}
+
+
 @media only screen and (min-width: 881px) {
 	.books-container {
 		grid-template-columns: repeat(3, 1fr);

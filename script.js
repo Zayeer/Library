@@ -1,3 +1,5 @@
+//to access saved data from local storage
+
 window.onload = () => {
 	const localStorageKeys = Object.keys(localStorage);
 	localStorageKeys.forEach(element => {
@@ -20,6 +22,9 @@ const addABook = document.querySelector(".addABook");
 const myForm = document.querySelector("#form");
 const formContainer = document.querySelector(".form-container");
 const emptyFields = document.querySelector("#submit>span");
+
+//to display form when add button is clicked in books-container
+
 const displayForm = () => {
 	booksContainer.style.display = "none";
 	formContainer.style.display = "flex";
@@ -27,6 +32,8 @@ const displayForm = () => {
 }
 
 addABook.addEventListener("click", displayForm);
+
+//function to close the form and display back books-container
 
 const closeForm = document.querySelector(".form-container>span");
 
@@ -38,6 +45,8 @@ const closeTheForm = () => {
 
 closeForm.addEventListener("click", closeTheForm);
 
+
+//to display tick mark if user checks the "read" checkbox in the form
 const checkBox = document.querySelector(".checkbox");
 const tickMark = document.querySelector(".checkbox>span");
 
@@ -73,7 +82,7 @@ const author = document.querySelector("#author>.labeledTextInput");
 const pages = document.querySelector("#pages>.pages");
 const submit = document.querySelector("#submit>.submit");
 
-
+//function to add book to the library after submitting the form
 const submitBook = () => { 
 	if(Boolean(title.value) === false ||
 	   Boolean(author.value) === false ||
@@ -101,6 +110,8 @@ const submitBook = () => {
 	}
 }
 
+//to check if user already has particular book in the library
+
 const checkForBook = (title, author) => {
 	for(let i = 0; i<myLibrary.length; i++) {
 				if(myLibrary[i]["title"] === title & myLibrary[i]["author"] === author) {
@@ -115,6 +126,7 @@ const checkForBook = (title, author) => {
 		return false;
 }	
 
+//display the submitted book by connecting it to the dom
 
 let createNewBook = () => {
 	const book = document.createElement("div");
