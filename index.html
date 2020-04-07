@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Library</title>
+</head>
+<body>
+	<h1>Library</h1>
+	<br>
+	<div class="books-container">
+		<div class="add">
+			<div class="addABook">Add</div>
+		</div>
+	</div>
+	<div class = "form-container">
+		<span>&#10006</span>
+		<form id = "form">
+			<div id="title">
+			<label for="title">Title</label>
+			<input type="text" name="title" id="title-input" class="labeledTextInput" maxlength="20" value = ""><br>
+			</div>
+			<div id="author">
+			<label for="author">Author</label>
+			<input type="text" name="author" class="labeledTextInput" maxlength="20" val=""><br>
+			</div>
+			<div id="pages">
+			<label for="pages">Pages</label>
+			<input type="number" name="pages" min="1" class="pages"><br>
+			</div>
+			<div id="read">
+			<label for="readStatus">Read</label>
+			<div class="checkbox"><span>&#10004</span></div><br>
+			</div>
+			<div id="submit">
+			<button type="button" class="submit">submit</button>
+			<span>*All fields are mandatory</span>
+			</div>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

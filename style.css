@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Marck+Script&display=swap|Lato&display=swap');
+
+:root {
+	--lobster: 'Lobster', cursive;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: #000;
+	color: red;
+	display: grid;
+}
+
+h1 {
+	font-family: var(--lobster); 
+	margin: 20px auto 0;
+	font-size: 5em;
+}
+
+.books-container {
+	font-size: 3em;
+	margin-top: 40px;
+	font-family: var(--lobster);
+	display: grid;
+	text-align: center;
+	grid-template-columns: 1fr;
+	grid-row-gap: 20px;
+}
+
+.book {
+	border: 5px solid red;
+	height: 8em;
+	border-radius: 10px;
+	font-family: 'Lobster', cursive;
+	display: grid;
+	grid-template-rows: auto 5.5fr 1.5fr 3fr 2fr 1fr;
+	width: 70%;
+	margin: auto;
+}
+
+.delete-book {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 5px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.title {
+	text-align: center;
+	font-size: 50px;
+}
+
+.by {
+	text-align: center;
+	font-size: 25px;
+}
+
+.author {
+	text-align: center;
+	font-size: 35px;
+}
+
+.pagesDisplay {
+	text-align: center;
+	font-size: 25px;
+}
+
+.isRead {
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: 'Marck Script', cursive;
+}
+
+.add {
+	border: 5px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	height: 8em;
+	width: 70%;
+	margin: auto;
+}
+
+.addABook {	
+	font-size: 1.5em;
+	text-decoration: underline;
+	transform: rotate(350deg); */ 
+}
+
+.addABook:hover {
+	transform: rotate(0deg);
+	cursor: pointer;
+}
+
+.form-container {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+	margin: 30px auto 0;
+	height: 13em;
+	font-size: 1.5em;
+	font-family: 'Marck Script', cursive;
+	border: 2px solid red;
+	border-radius: 10px;
+	line-height: 30px;
+	padding: 10px 0 20px;
+}
+
+.form-container span {
+	margin: 5px 10px 0 0;
+	align-self: flex-end;
+}
+
+label {
+	color: red;
+}
+
+form .labeledTextInput {
+	background-color: #000;
+	border : none;
+	border-bottom: 2px solid red;
+}
+
+#form {
+	display: flex;
+	line-height: 50px;
+	flex-direction: column;	
+	margin-left: 20px;
+}
+
+#title, #author, #pages, #read {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type="text"], input[type="number"] {
+	height: 25px;
+}
+
+input[type="number"] {
+	border: none;
+	border-bottom: 2px solid red;
+	background: #000;
+}
+
+.submit {
+	padding: 10px;
+	font-family: 'Marck Script', cursive;
+	border: 1px solid red;
+	background: #000;
+	width: 100px;
+	font-size: 1em;
+	color: red;
+}
+
+.form-container span:hover, 
+.submit:hover {
+	cursor: pointer;
+}
+
+.submit:focus {
+	outline:none;
+}
+
+input[name="author"] {
+	margin-right: 20px;
+}
+
+
+.checkbox {
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	border: 1px solid red;
+	position: relative;
+	right: 65px;
+	top: 15px;
+}
+
+.checkbox span {
+	display: none;
+	font-size: 12px;
+	position: absolute;
+	bottom: -18px;
+	left: 4px;
+}
+
+.checkbox:hover {
+	cursor: pointer;
+}
+
+input {
+	margin-top: 10px;
+	color: red;
+	font-family: 'Lato', sans-serif;
+}
+
+
+input:focus {
+	outline: none;
+	
+}
+
+input:active {
+	background: #000;
+}
+
+#submit {
+	height: 50px;
+}
+
+#submit span {
+	font-size: 0.5em;
+	display: none;
+}
+@media only screen and (min-width: 600px) and (max-width: 880px) {
+	.books-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+} 
+@media only screen and (min-width: 881px) {
+	.books-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.form-container {
+		width: 30%;
+	}
+} 
