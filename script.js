@@ -88,6 +88,7 @@ const author = document.querySelector("#author>.labeledTextInput");
 const pages = document.querySelector("#pages>.pages");
 const submit = document.querySelector("#submit>.submit");
 let isReadTag;
+let isReadVal;
 //function to add book to the library after submitting the form
 const submitBook = () => {
 	if (Boolean(title.value) === false ||
@@ -99,7 +100,6 @@ const submitBook = () => {
 		titleVal = title.value;
 		authorVal = author.value;
 		pagesVal = pages.value;
-		let isReadVal;
 		(tickMark.style.display === "block") ? isReadVal = "Read" : isReadVal = "Unread";
 		//checks if book is already present in the library, and execution stops here if there is a book
 		if (checkForBook(titleVal, authorVal)) {
@@ -114,6 +114,7 @@ const submitBook = () => {
 		localStorage.setItem(`${titleVal} by ${authorVal}`,
 			JSON.stringify(myLibrary[myLibrary.length - 1]));
 	}
+
 }
 
 //to check if user already has particular book in the library
@@ -165,7 +166,7 @@ let createNewBook = () => {
 	isReadTag.className = "isRead";
 	isReadTag.setAttribute("data-title", `${titleVal} by ${authorVal}`);
 	book.appendChild(isReadTag);
-	tickMark.style.display === "block" ? isReadTag.innerHTML = "Read <span>&#10004</span>" : isReadTag.innerHTML = "Unread";
+	 isReadVal === "Read" ? isReadTag.innerHTML = "Read <span>&#10004</span>" : isReadTag.innerHTML = "Unread";
 
 	isReadTag.innerHTML === "Unread" ? isReadTag.style.color = "yellow" :
 		isReadTag.style.color = "red";
