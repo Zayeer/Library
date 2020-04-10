@@ -79,6 +79,8 @@ h1 {
 	cursor: pointer;
 	font-size: 20px;
 	font-family: 'Marck Script', cursive;
+	height: 50px;
+	width: 100%;
 }
 
 .add {
@@ -234,6 +236,7 @@ input:active {
 	.books-container {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
 }
 
 
@@ -245,4 +248,5 @@ input:active {
 	.form-container {
 		width: 30%;
 	}
+
 } 
